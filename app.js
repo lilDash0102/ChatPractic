@@ -35,6 +35,20 @@ btn.addEventListener('click', e => {
     menssage.value = "";
 });
 
+menssage.addEventListener('keyup', e => {
+    if (e.key == "Enter") {
+        const Message = menssage.value;
+        const data = {
+            mensaje: Message,
+            url: url.value,
+            nick: nick.value,
+        }
+        ws.send(JSON.stringify(data));
+        showdata(JSON.stringify(data));
+        menssage.value = "";
+    }
+})
+
 ws.onmessage = ({ data }) => {
     showdata(data);
     notif.play();
@@ -47,7 +61,7 @@ function showdata(data) {
         "<img src='" + data.url + "' class='img-fluid d-inline' width='100px' height='100px' style='border-radius: 100%;'>" +
         "<div class='d-inline'><strong>" + data.nick + "</strong></div>" +
         "<p class = 'text-break d-inline text' > " + data.mensaje + " </p> <hr>" + "</div> </div>";
-
+    input.scrollTop = input.scrollHeight;
     console.log(data);
 
 }
