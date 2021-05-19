@@ -1,0 +1,15 @@
+{
+    "name": "pruebas",
+    "version": "1.0.0",
+    "description": "Pruebas con webScoket",
+    "main": "index.js",
+    "scripts": {
+        "test": "start"
+    },
+    "author": "Pedro Muñoz",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "ws": "^7.4.5"
+    }
+}
