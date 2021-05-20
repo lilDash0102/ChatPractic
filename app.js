@@ -9,7 +9,7 @@ const onLine = document.getElementById('cant');
 
 console.log(btn);
 console.log(menssage);
-const ws = new WebSocket('ws://51.89.164.147:3357');
+const ws = new WebSocket('wss://51.89.164.147:3357');
 ws.onopen = () => {
     console.log('connectado');
 }
