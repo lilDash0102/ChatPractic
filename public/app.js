@@ -7,6 +7,7 @@ const nick = document.getElementById('userName');
 const notif = document.getElementById('xyz');
 const onLine = document.getElementById('cant');
 
+
 console.log(btn);
 console.log(menssage);
 const ws = new WebSocket('ws://51.89.164.147:3357');
@@ -41,6 +42,7 @@ function sendMessage() {
         url: url.value,
         nick: nick.value,
     }
+
     ws.send(JSON.stringify(data));
     showdata(JSON.stringify(data));
     menssage.value = "";

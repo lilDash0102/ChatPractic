@@ -36,6 +36,8 @@
         <input type="text" placeholder="UserName" id="userName" value="Desconocido">
     </div>
     <audio id="xyz" src="alertas/notif.mp3" preload="auto"></audio>
+    
+    <?php var_dump($_SERVER['REMOTE_ADDR']) ?>
 </body>
 
 </html>
